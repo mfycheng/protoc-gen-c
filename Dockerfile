@@ -37,3 +37,4 @@ RUN ldconfig
 FROM ubuntu:latest
 COPY --from=builder /usr/local/bin /usr/local/bin
 COPY --from=builder /usr/local/lib /usr/local/lib
+RUN ldconfig
