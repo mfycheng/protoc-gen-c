@@ -4,12 +4,5 @@ Provides a proto build environment for protoc-gen-c.
 
 # Usage
 
-The image runs `protoc` over the `/proto` directory. The generated output is located in `/genproto`
-
-Example:
-
-```sh
-docker run -v api:/proto -v genproto:/genproto mfycheng/protoc-gen-c
-```
-
-Which compiles all of the protos (recursively) in `./api` and puts it in `./genproto`
+The image can be used as a base for others to build upon. This image is intended to reduce the
+build time of other docker images/containers, not be a build system in and of itself.
