@@ -34,6 +34,6 @@ RUN ./configure
 RUN make -j$(nproc) install
 RUN ldconfig
 
-FROM gcr.io/distroless/base-debian11
+FROM ubuntu:latest
 COPY --from=builder /usr/local/bin /usr/local/bin
 COPY --from=builder /usr/local/lib /usr/local/lib
